@@ -1,0 +1,64 @@
+
+
+<ul class="nav nav-pills" 
+[ngStyle]="{
+        backgroundColor : 'blue',
+        padding : '15px'
+}">
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link text-white"
+        [ngClass]="{
+            active : selectTab === 'angular'
+        }"
+        (click)="onTabclick('angular')">
+            ANGULAR
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link text-white"
+        [ngClass]="{
+            active : selectTab === 'javascript'
+        }"
+        (click)="onTabclick('javascript')">
+            JAVASCRIPT
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link text-white"
+        [ngClass]="{
+            active : selectTab === 'HTML'
+        }"
+        (click)="onTabclick('HTML')">
+            HTML
+        </a>
+    </li>
+</ul>
+<hr>
+
+<div class="tab-body">
+    <div class="card alert alert-dark" *ngIf="selectTab === 'angular'">
+        <div class="card-body">
+            <strong>Angular</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, molestiae eveniet? Porro illum unde, 
+            minus labore distinctio animi ratione accusamus itaque dolorum quisquam molestias aliquam enim,
+            cupiditate vitae voluptas laudantium!
+        </div>
+    </div>
+
+    <div class="card alert alert-info" *ngIf="selectTab === 'javascript'">
+        <div class="card-body">
+            <strong>Javascript</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, molestiae eveniet? Porro illum unde, 
+            minus labore distinctio animi ratione accusamus itaque dolorum quisquam molestias aliquam enim,
+            cupiditate vitae voluptas laudantium!
+        </div>
+    </div>
+
+    <div class="card alert alert-primary" *ngIf="selectTab === 'HTML'">
+        <div class="card-body">
+            <strong>HTML</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, molestiae eveniet? Porro illum unde, 
+            minus labore distinctio animi ratione accusamus itaque dolorum quisquam molestias aliquam enim,
+            cupiditate vitae voluptas laudantium!
+        </div>
+    </div>
+</div>
